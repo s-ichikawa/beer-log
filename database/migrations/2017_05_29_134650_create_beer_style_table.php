@@ -13,7 +13,7 @@ class CreateBeerStyleTable extends Migration
      */
     public function up()
     {
-        //
+
     }
 
     /**
@@ -23,6 +23,6 @@ class CreateBeerStyleTable extends Migration
      */
     public function down()
     {
-        //
+
     }
 }

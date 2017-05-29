@@ -13,7 +13,16 @@ class CreateBeersTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('beers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('name');
+            $table->text('color');
+            $table->integer('brewery_id');
+            $table->float('alc');
+            $table->float('ibu');
+            $table->text('description');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateBeersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('beers');
     }
 }
