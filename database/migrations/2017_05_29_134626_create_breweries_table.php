@@ -13,7 +13,12 @@ class CreateBreweriesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('breweries', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('name');
+            $table->text('description');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateBreweriesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('breweries');
     }
 }
