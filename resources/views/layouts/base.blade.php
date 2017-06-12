@@ -21,6 +21,6 @@
 </head>
 <body>
 @section('contents')
-    @show
+@show
 </body>
 </html>
