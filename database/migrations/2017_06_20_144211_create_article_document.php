@@ -13,8 +13,11 @@ class CreateArticleDocument extends Migration
      */
     public function up()
     {
-        $client = new \Solarium\Client(config('database.solr'));
+        $config = config('database.solr');
+        $client = new \GuzzleHttp\Client();
+        $client->get($config[''], [
 
+        ]);
     }
 
     /**
