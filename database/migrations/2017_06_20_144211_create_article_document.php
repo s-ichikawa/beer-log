@@ -15,7 +15,7 @@ class CreateArticleDocument extends Migration
     {
         $config = config('database.solr');
         $client = new \GuzzleHttp\Client();
-        $client->get($config[''], [
+        $client->get($config['url'] . '/solr', [
 
         ]);
     }

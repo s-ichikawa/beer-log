@@ -118,6 +118,7 @@ return [
     ],
 
     'solr' => [
-
+        'url'  => 'localhost:8983',
+        'core' => 'beer_log',
     ],
 ];
