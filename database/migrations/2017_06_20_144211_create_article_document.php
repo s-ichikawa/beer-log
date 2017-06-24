@@ -1,32 +1,14 @@
 <?php
+require_once __DIR__ . '/../../vendor/autoload.php';
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
+$client = new \GuzzleHttp\Client();
+$response = $client->post("http://localhost:8983/solr/beer_log/schema", [
+    'json' => [
+        'add-field' => [
+            'name' => 'name',
+            'type' => 'string'
+        ]
+    ]
+]);
 
-class CreateArticleDocument extends Migration
-{
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        $config = config('database.solr');
-        $client = new \GuzzleHttp\Client();
-        $client->get($config['url'] . '/solr', [
-
-        ]);
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        //
-    }
-}
+echo $response->getBody();
