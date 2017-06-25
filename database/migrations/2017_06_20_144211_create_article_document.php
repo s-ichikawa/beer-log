@@ -7,6 +7,10 @@ $response = $client->post("http://localhost:8983/solr/beer_log/schema", [
         'add-field' => [
             'name' => 'name',
             'type' => 'string'
+        ],
+        'add-field' => [
+            'name' => 'type_name',
+            'type' => 'string'
         ]
     ]
 ]);
