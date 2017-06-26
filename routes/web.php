@@ -12,3 +12,11 @@
 */
 
 Route::get('/', 'IndexController@index');
+
+Route::get('/add', function () {
+    return view('add');
+});
+
+Route::post('/add', function (Request $request) {
+    var_dump($request);
+});
