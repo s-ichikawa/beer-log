@@ -3,5 +3,5 @@
 @section('title', 'TOP')
 
 @section('contents')
-    Hello Laravel!
+    <a href="/add">add</a>
 @endsection
