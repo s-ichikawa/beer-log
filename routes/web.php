@@ -13,10 +13,6 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/add', function () {
-    return view('add');
-});
+Route::get('/add', 'BeerRegisterController@index');
 
-Route::post('/add', function (Request $request) {
-    var_dump($request);
-});
+Route::post('/add', 'BeerRegisterController@upload');
